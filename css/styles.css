@@ -1,0 +1,348 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+    --ccmvr-navy: #0f172a;
+    --ccmvr-indigo: #3730a3;
+    --ccmvr-accent: #2563eb;
+    --ccmvr-gold: #d97706;
+    --ccmvr-emerald: #059669;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #f1f5f9 0%, #eef2ff 50%, #f8fafc 100%);
+    background-attachment: fixed;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Correctif universel Windows pour les menus déroulants <select> et <option> */
+select option {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-weight: 500;
+    padding: 8px;
+}
+
+select.select-dark option {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Cartes Modernes avec Effets Subtils */
+.card-minimal {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.04), 0 2px 4px -2px rgba(15, 23, 42, 0.02);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-minimal:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.06), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
+}
+
+/* Bordures colorées supérieures pour les cartes KPI */
+.card-accent-blue { border-top: 3px solid #2563eb; }
+.card-accent-indigo { border-top: 3px solid #4f46e5; }
+.card-accent-emerald { border-top: 3px solid #10b981; }
+.card-accent-amber { border-top: 3px solid #f59e0b; }
+.card-accent-rose { border-top: 3px solid #f43f5e; }
+.card-accent-purple { border-top: 3px solid #8b5cf6; }
+
+/* Boutons Modernes avec Dégradés et Effets */
+.btn-primary {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.625rem;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+    transition: all 0.2s ease;
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px -2px rgba(15, 23, 42, 0.22);
+}
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.625rem;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+    transition: all 0.2s ease;
+}
+.btn-accent:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #4338ca 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+/* Input Styles */
+.input-clean {
+    width: 100%;
+    padding: 0.55rem 0.8rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.625rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+.input-clean:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+.input-clean:disabled, .input-clean[readonly] {
+    background-color: #f1f5f9;
+    color: #64748b;
+    cursor: not-allowed;
+}
+
+/* Navigation Latérale Gauche (Sidebar Moderne) */
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    border-radius: 0.75rem;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    text-align: left;
+    border: 1px solid transparent;
+}
+.sidebar-nav-item:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateX(3px);
+}
+.sidebar-nav-item.active {
+    color: #ffffff;
+    font-weight: 700;
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+    border-color: rgba(147, 197, 253, 0.3);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+/* Anciennes pilules secondaires (au besoin dans les sous-vues) */
+.nav-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #475569;
+    border-radius: 0.5rem;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.nav-tab:hover {
+    color: #0f172a;
+    background-color: #f1f5f9;
+}
+.nav-tab.active {
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+/* Progress Bar Animation */
+.progress-bar-fill {
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animation d'apparition douce du contenu */
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.view-animate {
+    animation: fadeInSlide 0.22s ease-out forwards;
+}
+
+/* Toast Notification */
+@keyframes slideInUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.toast-enter {
+    animation: slideInUp 0.25s ease-out forwards;
+}
+
+/* Commission Presentation Mode */
+.presentation-mode-overlay {
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
+}
+
+/* Print Layout for Official Documents (Conventions, Attestations, A4 Paged Media) */
+@page {
+    size: A4 portrait;
+    margin: 16mm 15mm 18mm 15mm;
+    @top-right {
+        content: "Communauté de Communes Marches du Velay-Rochebaron";
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 7.5pt;
+        color: #64748b;
+    }
+    @bottom-left {
+        content: "Convention pluriannuelle d'objectifs • Exécution budgétaire";
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 7.5pt;
+        color: #64748b;
+    }
+    @bottom-right {
+        content: "Page " counter(page) " sur " counter(pages);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 8pt;
+        font-weight: 700;
+        color: #0f172a;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #printable-document-area, #printable-document-area * {
+        visibility: visible;
+    }
+    #printable-document-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+    thead.print-running-header {
+        display: table-header-group;
+    }
+    tfoot.print-running-footer {
+        display: table-footer-group;
+    }
+    tr, .avoid-break-inside {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+    .force-break-before {
+        break-before: page !important;
+        page-break-before: always !important;
+    }
+}
+
+
+/* ========================================================================== */
+/* CODES VISUELS DES FORMULAIRES ASSOCIATION (VERT / JAUNE / ROUGE CLAIR)      */
+/* ========================================================================== */
+
+/* 1. VERT CLAIR : Bien renseigné */
+.field-status-green,
+input.field-status-green,
+select.field-status-green,
+textarea.field-status-green {
+    background-color: #ecfdf5 !important;
+    border-color: #6ee7b7 !important;
+    color: #064e3b !important;
+}
+.field-status-green:focus,
+input.field-status-green:focus,
+select.field-status-green:focus,
+textarea.field-status-green:focus {
+    border-color: #10b981 !important;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25) !important;
+    outline: none !important;
+}
+
+/* 2. JAUNE CLAIR : Non renseigné mais pas bloquant (facultatif) */
+.field-status-yellow,
+input.field-status-yellow,
+select.field-status-yellow,
+textarea.field-status-yellow {
+    background-color: #fefce8 !important;
+    border-color: #fde047 !important;
+    color: #713f12 !important;
+}
+.field-status-yellow:focus,
+input.field-status-yellow:focus,
+select.field-status-yellow:focus,
+textarea.field-status-yellow:focus {
+    border-color: #eab308 !important;
+    box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.25) !important;
+    outline: none !important;
+}
+
+/* 3. ROUGE CLAIR : Non renseigné et bloquant (obligatoire) */
+.field-status-red,
+input.field-status-red,
+select.field-status-red,
+textarea.field-status-red {
+    background-color: #fff1f2 !important;
+    border-color: #fda4af !important;
+    color: #881337 !important;
+}
+.field-status-red:focus,
+input.field-status-red:focus,
+select.field-status-red:focus,
+textarea.field-status-red:focus {
+    border-color: #f43f5e !important;
+    box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.25) !important;
+    outline: none !important;
+}
+
+/* Cartes (radios / checkboxes) */
+.card-status-green {
+    background-color: #ecfdf5 !important;
+    border-color: #10b981 !important;
+    box-shadow: 0 2px 8px -2px rgba(16, 185, 129, 0.2) !important;
+}
+.card-status-yellow {
+    background-color: #fefce8 !important;
+    border-color: #eab308 !important;
+}
+.card-status-red {
+    background-color: #fff1f2 !important;
+    border-color: #f43f5e !important;
+    box-shadow: 0 2px 8px -2px rgba(244, 63, 94, 0.2) !important;
+}

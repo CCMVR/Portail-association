@@ -24,7 +24,7 @@ window.CCMVR.CONFIG = {
     DELIBERATION_CADRE: 'CCMVR260505-21 du 5 mai 2026',
     ANNEE_PAR_DEFAUT: 2027,
     API_ENTREPRISE_UID: '3fbf31bf-0832-460a-8eeb-aac4f2a90c35',
-    API_ENTREPRISE_TOKEN: 'eyJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIzZmJmMzFiZi0wODMyLTQ2MGEtOGVlYi1hYWM0ZjJhOTBjMzUiLCJqdGkiOiIzZmJmMzFiZi0wODMyLTQ2MGEtOGVlYi1hYWM0ZjJhOTBjMzUiLCJzY29wZXMiOlsiYXNzb2NpYXRpb25zX2RqZXB2YSIsInVuaXRlc19sZWdhbGVzX2V0YWJsaXNzZW1lbnRzX2luc2VlIiwib3Blbl9kYXRhIl0sInN1YiI6IkNvbnRyw7RsZSBkZSBnZXN0aW9uIiwiZXh0cmFfaW5mbyI6e30sImlhdCI6MTcyNzM0NTE5NiwidmVyc2lvbiI6IjEuMCIsImV4cCI6MTgzNDEzNTE2MX0.e1Oo_SKTEMp0BajLZYaZFp5-lYu_C5zijTiS-6O_Kw8',
+    API_ENTREPRISE_TOKEN: '',
     API_ENTREPRISE_SCOPES: ['associations_djepva', 'unites_legales_etablissements_insee', 'open_data'],
 
     // Profils de démonstration & Rôles métiers
